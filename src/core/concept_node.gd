@@ -38,6 +38,8 @@ var _output_ready := false # True when the background generation was completed
 func _enter_tree() -> void:
 	if _initialized:
 		return
+	if not EditorPlugin:
+		return
 
 	_generate_default_gui()
 	_setup_slots()
